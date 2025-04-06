@@ -31,5 +31,11 @@ class MyUIView: UIView {
            return view
        }
 
-
+    var resp:(()->Void)?
+    
+    @IBAction func buttonAction(_ sender: Any) {
+        print("test")
+        resp?()
+    }
+    
 }
