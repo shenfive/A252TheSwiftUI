@@ -32,5 +32,5 @@ struct CardView: View {
 }
 
 #Preview {
-    CardView(content: "Hello")
+    CardView()
 }
