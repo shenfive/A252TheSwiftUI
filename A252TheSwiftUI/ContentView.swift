@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var page:Int = 1
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView(selection: $page) {
+            Text("Hello, World! \(page)")
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+                .tag(8)
+            Text(" SwiftUI  \(page)  xxx")
+                .tabItem {
+                    Image(systemName: "book")
+                    Text("SwiftUI")
+                }
+                .tag(2)
         }
-        .padding()
     }
 }
 
