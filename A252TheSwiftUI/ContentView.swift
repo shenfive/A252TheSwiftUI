@@ -17,13 +17,20 @@ struct ContentView: View {
                                                 getWidthOfNumberInLine(number: 4)
                                               ))]) {
             CardView(content:"😍")
+                .aspectRatio(2/3, contentMode: .fit)
             CardView(content:"😍")
+                .aspectRatio(2/3, contentMode: .fit)
             CardView(content:"😍")
+                .aspectRatio(2/3, contentMode: .fit)
             CardView(content:"😍")
+                .aspectRatio(2/3, contentMode: .fit)
             CardView(content:"😍")
+                .aspectRatio(2/3, contentMode: .fit)
             CardView(content:"😍")
+                .aspectRatio(2/3, contentMode: .fit)
             CardView(content:"😍")
-            CardView(content:"😍")
+                .aspectRatio(2/3, contentMode: .fit)
+  
         }
         
     }
