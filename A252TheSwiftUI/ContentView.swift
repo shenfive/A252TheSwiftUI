@@ -25,7 +25,7 @@ struct ContentView: View {
                 }
             }
             .foregroundColor(.red)
-            MyViewForSwiftUI()
+            MyViewControllerForSwiftUI()
             HStack{
                 add
                 Spacer()
