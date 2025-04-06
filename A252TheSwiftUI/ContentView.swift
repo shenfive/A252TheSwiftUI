@@ -6,14 +6,33 @@
 //
 
 import SwiftUI
+import UIKit
+
 struct ContentView: View {
     var emojis = ["🚲", "🚂", "🚁", "🚜", "🚕", "🏎", "🚑", "🚓", "🚒", "✈️", "🚀", "⛵️", "🛸", "🛶", "🚌", "🏍", "🛺", "🚠", "🛵", "🚗", "🚚", "🚇", "🛻", "🚝"]
     
     
     var body: some View {
-        CardView(content:"😍")
+        LazyVGrid(columns: [GridItem(.adaptive(minimum:
+                                                getWidthOfNumberInLine(number: 4)
+                                              ))]) {
+            CardView(content:"😍")
+            CardView(content:"😍")
+            CardView(content:"😍")
+            CardView(content:"😍")
+            CardView(content:"😍")
+            CardView(content:"😍")
+            CardView(content:"😍")
+            CardView(content:"😍")
+        }
+        
     }
     
+    func getWidthOfNumberInLine(number:Double)->Double{
+        let screenWidth = UIScreen.main.bounds.width
+        
+        return screenWidth / number - 10
+    }
     
 }
 
