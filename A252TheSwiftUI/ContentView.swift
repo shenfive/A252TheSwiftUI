@@ -8,13 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var theText:String = ""
+  
+    
+    @State var r = 0.5
+    @State var g = 0.5
+    @State var b = 0.5
+    
     var body: some View {
-        Text("輸入的字:\(theText)")
-            .font(.largeTitle)
-        TextField("请输入", text: $theText)
-            .padding(10)
+        ZStack{
+            theBackgroud
+            VStack{
+                Text("test")
+                Spacer()
+                Slider(value: $r)
+                    .padding(.horizontal, 30.0)
+                    .padding(
+                        .vertical,
+                        10.0
+                    )
+                Slider(value: $g)
+                    .padding(.horizontal, 30.0)
+                    .padding(
+                        .vertical,
+                        10.0
+                    )
+                Slider(value: $b)
+                    .padding(.horizontal, 30.0)
+                    .padding(
+                        .vertical,
+                        10.0
+                    )
+            }
+        }
     }
+    
+    var theBackgroud:some View {
+        Color(red: r, green: g, blue: b)
+    }
+    
 }
 
 #Preview {
