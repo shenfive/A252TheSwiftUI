@@ -8,22 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var page:Int = 1
+    @State var theText:String = ""
     var body: some View {
-        TabView(selection: $page) {
-            Text("Hello, World! \(page)")
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-                .tag(8)
-            Text(" SwiftUI  \(page)  xxx")
-                .tabItem {
-                    Image(systemName: "book")
-                    Text("SwiftUI")
-                }
-                .tag(2)
-        }
+        Text("輸入的字:\(theText)")
+            .font(.largeTitle)
+        TextField("请输入", text: $theText)
+            .padding(10)
     }
 }
 
